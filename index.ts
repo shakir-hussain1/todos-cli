@@ -18,7 +18,7 @@ let todoOperation:any = await inquirer.prompt(
             name: "operation",
             type: "list",
             message: (chalk.red("Please select operation to do: ")),
-            choices: ["Add", "Delete", "Edit", "View", "Exit"]
+            choices: ["Add Task", "Delete Task", "Edit Task", "View Task", "Exit Task"]
         }
     ]
 )
