@@ -10,11 +10,11 @@ while (condition) {
             name: "operation",
             type: "list",
             message: (chalk.red("Please select operation to do: ")),
-            choices: ["Add", "Delete", "Edit", "View", "Exit"]
+            choices: ["Add Task", "Delete Task", "Edit Task", "View Task", "Exit Task"]
         }
     ]);
     // Add Task
-    if (todoOperation.operation === "Add") {
+    if (todoOperation.operation === "Add Task") {
         let addTask = await inquirer.prompt([
             {
                 name: "addItem",
@@ -34,7 +34,7 @@ while (condition) {
         condition = addTask.mainMenu;
     }
     // Delete Task
-    else if (todoOperation.operation === "Delete") {
+    else if (todoOperation.operation === "Delete Task") {
         let deleteTask = await inquirer.prompt([
             {
                 name: "deleteItem",
@@ -54,7 +54,7 @@ while (condition) {
         condition = deleteTask.mainMenu;
     }
     //Edit Task
-    else if (todoOperation.operation === "Edit") {
+    else if (todoOperation.operation === "Edit Task") {
         let editTask = await inquirer.prompt([
             {
                 name: "editItem",
@@ -79,7 +79,7 @@ while (condition) {
         condition = editTask.mainMenu;
     }
     //view Task
-    else if (todoOperation.operation === "View") {
+    else if (todoOperation.operation === "View Task") {
         console.log(chalk.bgGreen("Here is your Todos"));
         console.log(todos);
     }

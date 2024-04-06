@@ -24,7 +24,7 @@ let todoOperation:any = await inquirer.prompt(
 )
 
 // Add Task
-if (todoOperation.operation === "Add")
+if (todoOperation.operation === "Add Task")
 {
     let addTask:any = await inquirer.prompt(
         [
@@ -48,7 +48,7 @@ if (todoOperation.operation === "Add")
 }
 
 // Delete Task
-else if (todoOperation.operation === "Delete")
+else if (todoOperation.operation === "Delete Task")
 {
     let deleteTask:any = await inquirer.prompt(
         [
@@ -72,7 +72,7 @@ else if (todoOperation.operation === "Delete")
     } 
 
     //Edit Task
-    else if (todoOperation.operation === "Edit")
+    else if (todoOperation.operation === "Edit Task")
     {
         let editTask:any = await inquirer.prompt(
             [
@@ -101,7 +101,7 @@ else if (todoOperation.operation === "Delete")
         }
 
     //view Task
-else if (todoOperation.operation === "View"){
+else if (todoOperation.operation === "View Task"){
     console.log(chalk.bgGreen("Here is your Todos"))
     console.log(todos);
 }
